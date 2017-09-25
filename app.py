@@ -40,7 +40,7 @@ def webhook():
 # construct search query from result.parameters
 def processRequest(req):
 
-    if req.get("result").get("action") != "googleSearch":
+    if req.get("result").get("action") != "web.search":
         return {}
     json_params = req.get("result").get("parameters")
     searchstring = ''    # this creates the overall topic which covers user's raw query
